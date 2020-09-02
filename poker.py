@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters as converter
 import seaborn as sns; sns.set()
-import plotly.graph_objects as go
 from collections import Counter
 
 
