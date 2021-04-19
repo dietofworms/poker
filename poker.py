@@ -55,7 +55,7 @@ def generate_standings(df: pd.DataFrame()) -> pd.DataFrame():
     table['wins'] = table['wins'].astype('int64')
     table['games_played'] = table['games_played'].astype('int64')
     table = table[['games_played', 'points', 'ppg', 'wins']]
-    table=table.sort_values(by=['points'], ascending=False)
+    table=table.sort_values(by=['ppg'], ascending=False)
     
     return table
 
@@ -105,13 +105,13 @@ def generate_histograms(data: pd.DataFrame()):
     players = list(set(data['player']))
 
     # initialise empty list of scores for each player
-    scores_steve, scores_mellick, scores_antoni, scores_robbo, scores_sam, scores_lowes = ([] for i in range(0, len(players))) 
+    scores_steve, scores_mellick, scores_antoni, scores_robbo, scores_sam, scores_lowes, scores_sok, scores_kameta, scores_keiran = ([] for i in range(0, len(players))) 
 
     # create list of lists of all scores
-    scores = [scores_steve, scores_mellick, scores_antoni, scores_robbo, scores_sam, scores_lowes]
+    scores = [scores_steve, scores_mellick, scores_antoni, scores_robbo, scores_sam, scores_lowes, scores_sok, scores_kameta, scores_keiran]
 
     # zip the list and player names together for iteration
-    score_dict = dict(zip(players, [0,0,0,0,0,0]))
+    score_dict = dict(zip(players, [0,0,0,0,0,0,0,0,0]))
 
     # iterate through the zipped list and assign the list of values to each list
     for player in players:
@@ -128,7 +128,7 @@ def generate_histograms(data: pd.DataFrame()):
 
     plt.figure()
     for i in range(len(players)):
-        ax = plt.subplot(3, 2, i+1)
+        ax = plt.subplot(3, 3, i+1)
         plt.bar(score_dict[players[i]].keys(), score_dict[players[i]].values())
         plt.xticks(range(1, 7))
         #plt.xlabel('position')
