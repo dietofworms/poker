@@ -1,5 +1,5 @@
 # Poker Game Analysis
-![poker](https://github.com/dietofworms/poker/blob/master/plots/StandingsOverTime-line.png)
+![poker](https://github.com/dietofworms/poker/blob/master/plots/standings-hist.png)
 
 Analysing poker data from home games with friends. Not a lot of data is collected, so this project is primarily focussed on descriptive analytics and basic plotting.
 
