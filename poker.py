@@ -69,7 +69,7 @@ def generate_plot(data: pd.DataFrame()):
     plt.rcParams["figure.figsize"] = (26, 22)
 
     # setting font family
-    plt.rcParams['font.family'] = 'Jetbrains Mono'
+    # plt.rcParams['font.family'] = 'mono'
 
     # plt.rcParams['lines.linewidth'] = 20
     # plt.rcParams['lines.markersize'] = 1
