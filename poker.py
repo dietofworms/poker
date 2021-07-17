@@ -130,7 +130,8 @@ def generate_histograms(data: pd.DataFrame()):
     for i in range(len(players)):
         ax = plt.subplot(3, 3, i+1)
         plt.bar(score_dict[players[i]].keys(), score_dict[players[i]].values())
-        plt.xticks(range(1, 7))
+        plt.xticks(range(1, 9))
+        plt.yticks(range(0, 10))
         #plt.xlabel('position')
         #plt.ylabel('frequency')
         plt.title('%s' % players[i])
